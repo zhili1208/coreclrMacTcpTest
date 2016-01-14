@@ -1,0 +1,36 @@
+﻿{
+  "version": "1.0.0-*",
+  "description": "Server Console Application",
+  "authors": [ "lzhi" ],
+  "tags": [ "" ],
+  "projectUrl": "",
+  "licenseUrl": "",
+
+  "compilationOptions": {
+    "emitEntryPoint": true
+  },
+
+  "dependencies": {
+  },
+
+  "commands": {
+    "Server": "Server"
+  },
+
+  "frameworks": {
+    "dnx451": { },
+    "dnxcore50": {
+      "dependencies": {
+        "Microsoft.CSharp": "4.0.1-beta-23516",
+        "System.Collections": "4.0.11-beta-23516",
+        "System.Console": "4.0.0-beta-23516",
+        "System.Linq": "4.0.1-beta-23516",
+        "System.Threading": "4.0.11-beta-23516",
+        "System.Threading.Tasks": "4.0.11-beta-23516",
+        "System.Net.Sockets": "4.0.10-beta-23123",
+        "System.Net.Primitives": "4.0.10-beta-23109",
+        "System.IO": "4.0.11-beta-23516"
+      }
+    }
+  }
+}
