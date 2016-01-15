@@ -9,16 +9,28 @@ namespace Server
     {
         public static void Main(string[] args)
         {
+            Console.WriteLine("Server start");
             int port = 55555;
             var listener = new TcpListener(IPAddress.Loopback, port);
             listener.Start();
+            Console.WriteLine("start listening");
 
             var client = listener.AcceptTcpClientAsync().Result;
             var stream = client.GetStream();
 
             var reader = new StreamReader(stream);
+            
+            Console.WriteLine("Connected");
+            
+            var data = reader.ReadLine();
 
-            Console.WriteLine(reader.ReadLine());
+            if (data == null) {
+                Console.WriteLine("data is null");
+            } 
+            else 
+            {
+                Console.WriteLine(data);
+            }            
         }
     }
 }
