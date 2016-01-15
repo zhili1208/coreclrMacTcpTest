@@ -13,7 +13,7 @@ namespace Server
             var listener = new TcpListener(IPAddress.Loopback, port);
             listener.Start();
 
-            var client = listener.AcceptTcpClient();
+            var client = listener.AcceptTcpClientAsync().Result;
             var stream = client.GetStream();
 
             var reader = new StreamReader(stream);
